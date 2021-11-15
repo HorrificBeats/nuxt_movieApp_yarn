@@ -4,7 +4,7 @@
     <Hero />
 
     <!-- SEARCH -->
-    <div class="container search">
+    <div id="movie-grid" class="container search">
       <input
         ref="search"
         v-model.lazy="searchInput"
@@ -25,7 +25,7 @@
     <!-- MOVIES -->
     <div v-else class="container movies">
       <!-- SEARCHED MOVIES -->
-      <div v-if="searchInput !== ''" id="movie-grid" class="movies-grid">
+      <div v-if="searchInput !== ''" class="movies-grid">
         <!-- Iterating throught the new variable, containg the results of our query -->
         <div
           v-for="(movie, index) in searchedMovies"
@@ -60,7 +60,7 @@
               }}
             </p>
             <NuxtLink
-              class="button"
+              class="button button-light"
               :to="{ name: 'movies-id', params: { id: movie.id } }"
             >
               Get more info
@@ -109,7 +109,6 @@
         </div>
       </div>
     </div>
-    <div></div>
   </div>
 </template>
 
@@ -233,14 +232,16 @@ export default {
       padding: 12px 6px;
       font-size: 14px;
       border: none;
-      border-radius: 15px;
       &:focus {
         outline: none;
       }
     }
     .button {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
+      margin-left: 1rem;
+      &:hover {
+        background: var(--color-secondary);
+        color: var(--bg);
+      }
     }
   }
   .movies {
@@ -333,5 +334,4 @@ export default {
     }
   }
 }
-
 </style>

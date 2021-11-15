@@ -114,7 +114,7 @@ export default {
 .title {
   font-size: 60px;
   font-weight: 400;
-  color: #c92502;
+  color: var(--color-primary);
 }
 span {
   text-decoration: underline;
@@ -135,7 +135,7 @@ span {
   left: 32px;
 }
 .single-movie {
-  color: #fff;
+  color: var(--color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -146,7 +146,7 @@ span {
     flex-direction: column;
     align-items: center;
     gap: 32px;
-    color: #fff;
+    color: var(--color);
     @media (min-width: 800px) {
       flex-direction: row;
       align-items: flex-start;
