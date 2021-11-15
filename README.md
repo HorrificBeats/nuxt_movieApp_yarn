@@ -12,7 +12,7 @@ $ yarn dev
 
 ## Features
 
-### • Display Recent Movies
+### Display Recent Movies
   - uses the [The Movie DB API](https://www.themoviedb.org)
 ### Display details of a movie (wildcard route)
 ### Search Engine
