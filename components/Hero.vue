@@ -2,8 +2,7 @@
   <div class="hero">
     <div class="text-container">
       <div class="text">
-        <span class="mini-heading">Now Streaming</span>
-        <h1><span>Now</span> Streaming</h1>
+        <h1><span>Now</span>Watching</h1>
         <a href="#movie-grid" class="button">View Movies</a>
       </div>
     </div>
@@ -83,16 +82,6 @@ export default {
       width: 100%;
       max-width: 1400px;
       margin: 0 auto;
-    }
-    .mini-heading {
-      font-weight: 600;
-      font-size: 18px;
-      text-transform: uppercase;
-      color: var(--color-primary);
-      margin-bottom: 8px;
-      @media (min-width: 750px) {
-        font-size: 22px;
-      }
     }
     h1 {
       color: #fff;

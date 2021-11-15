@@ -12,14 +12,12 @@
         placeholder="Search"
         class="text-dark form-control border shadow-sm"
         @keyup.enter="$fetch"
+        @keyup.esc="clearSearch"
       />
       <button v-if="searchInput !== ''" class="button" @click="clearSearch">
         Clear search
       </button>
     </div>
-
-    <!-- <b-pagination v-model="currentPage" :total-rows="1"></b-pagination>
-    <b-pagination-nav /> -->
 
     <!-- LOADING -->
     <Loading v-if="$fetchState.pending" />
@@ -235,6 +233,7 @@ export default {
       padding: 12px 6px;
       font-size: 14px;
       border: none;
+      border-radius: 15px;
       &:focus {
         outline: none;
       }
