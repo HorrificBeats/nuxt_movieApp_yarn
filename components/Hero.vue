@@ -10,35 +10,8 @@
 </template>
 
 <script>
-import axios from 'axios'
 export default {
   name: 'Hero',
-  data() {
-    return {
-      // Initialising reactive variables
-      trendingMovie: '',
-    }
-  },
-  async fetch() {
-    await this.getTrendingMovie
-  },
-  methods: {
-    async getTrendingMovie() {
-      // Requesting data /w axios
-      const data = axios.get(
-        `https://api.themoviedb.org/3/trending/movie/day?api_key=adced3e6aeb79e0749d5c328257e0461`
-      )
-      // Assigning PROMISE reponsive to `result`
-      const result = await data
-
-      // Parsing `results`
-      result.data.results.forEach((movie) => {
-        this.movies.push(movie)
-      })
-      // eslint-disable-next-line no-console
-      console.log(result)
-    },
-  },
 }
 </script>
 
