@@ -16,6 +16,7 @@
   --bg: #f3f5f4;
   --bg-secondary: #fff;
   --border-color: #ddd;
+  --btn-hover: #371588;
 }
 
 .dark-mode {
@@ -25,6 +26,7 @@
   --bg: #1a0928;
   --bg-secondary: #071521;
   --border-color: #0d2538;
+  --btn-hover: #371588;
 }
 .sepia-mode {
   --color: #433422;
@@ -38,7 +40,7 @@
   color: var(--color);
 }
 .form-control:focus {
-  border: var(--color-primary) ;
+  border: var(--color-primary);
   box-shadow: inset 0 1px 1px var(--color-primary), 0 0 8px var(--color-primary);
 }
 
@@ -76,14 +78,14 @@ body {
   padding: 8px 16px;
   background-color: var(--color-primary);
   border: none;
-  color: white;
+  color:  var(--bg);;
   border-radius: 4px;
   cursor: pointer;
   transition: 0.3s ease all;
 
   &:hover {
-    background-color: #146861;
-    color: white;
+    background-color: var(--bg);
+    color: var(--color-primary);
   }
 }
 
@@ -95,6 +97,7 @@ body {
 
   &:hover {
     border-color: transparent;
+    background-color: var(--color-primary);
     color: var(--bg);
   }
 }

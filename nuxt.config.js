@@ -14,7 +14,10 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' },
-    ]
+    ],
+    script: [
+      { src: "https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"},
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
