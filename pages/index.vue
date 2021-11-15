@@ -123,7 +123,7 @@ export default {
       searchedMovies: [],
       searchInput: '',
       lastSearch: '',
-      currentPage: `https://api.themoviedb.org/3/movie/now_playing?api_key=adced3e6aeb79e0749d5c328257e0461&language=en-US&page=1`,
+      currentPage: `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.API_SECRET}&language=en-US&page=1`,
 
       colors: ['system', 'light', 'dark', 'sepia'],
     }
@@ -197,7 +197,7 @@ export default {
 
     async searchMovies() {
       const data = axios.get(
-        `https://api.themoviedb.org/3/search/movie?api_key=37ed43a4f8eaa2abd75f9283692947bc&language=en-US&page=1&query=${this.searchInput}`
+        `https://api.themoviedb.org/3/search/movie?api_key=${process.env.API_SECRET}&language=en-US&page=1&query=${this.searchInput}`
       )
       const result = await data
       // this.searchedMovies = []
