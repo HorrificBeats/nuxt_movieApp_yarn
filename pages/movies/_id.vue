@@ -101,7 +101,7 @@ export default {
   methods: {
     async getSingleMovie() {
       const data = axios.get(
-        `https://api.themoviedb.org/3/movie/${this.$route.params.id}?api_key=${process.env.API_SECRET}&language=en-US`
+        `https://api.themoviedb.org/3/movie/${this.$route.params.id}?api_key=adced3e6aeb79e0749d5c328257e0461&language=en-US`
       )
       const result = await data
       this.movie = result.data
